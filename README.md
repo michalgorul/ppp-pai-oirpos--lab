@@ -1,6 +1,7 @@
 # Praktyka Programowania Python / Projektowanie Aplikacji Internetowych - PHP, Python, Javascript / Organizacja i rozwój projektów Open Source [SSM]
 
-```console
+## Creating VirtualEnv
+```bash
 deactivate
 rmdir venv
 py -3.10 -m pip install --upgrade pip
