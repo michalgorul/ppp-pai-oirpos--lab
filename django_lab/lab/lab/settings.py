@@ -32,6 +32,7 @@ ALLOWED_HOSTS: List[str] = []
 # Application definition
 
 INSTALLED_APPS = [
+    "news.apps.NewsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -55,7 +56,7 @@ ROOT_URLCONF = "lab.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["django_lab.lab.templates"],
+        "DIRS": ["django_lab/lab/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

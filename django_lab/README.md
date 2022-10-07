@@ -21,7 +21,14 @@ In the root folder just type in terminal:
 ### start app
 In the root folder just type in terminal:
 ```bash
-.\venv\Scripts\python.exe .\django_lab\lab\manage.py startapp home
+.\venv\Scripts\python.exe .\django_lab\lab\manage.py startapp news
+```
+
+## Create table in database
+```bash
+.\venv\Scripts\python.exe .\django_lab\lab\manage.py migrate
+.\venv\Scripts\python.exe .\django_lab\lab\manage.py sqlmigrate news 0001
+.\venv\Scripts\python.exe .\django_lab\lab\manage.py makemigrations news
 ```
 
 ## Linter
@@ -35,3 +42,4 @@ In the root folder just type in terminal:
 ```bash
 black django_lab
 ```
+
