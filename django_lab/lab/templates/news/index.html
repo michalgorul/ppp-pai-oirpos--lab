@@ -1,0 +1,9 @@
+{% if news %}
+<ul>
+{%for n in news %}
+<li> {{n.topic}} </a>
+{% endfor %}
+</ul>
+{% else %}
+<p>No news are available. </p>
+{% endif %}
