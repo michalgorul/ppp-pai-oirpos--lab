@@ -21,7 +21,7 @@ In the root folder just type in terminal:
 ### start app
 In the root folder just type in terminal:
 ```bash
-.\venv\Scripts\python.exe .\django_lab\lab\manage.py startapp news
+.\venv\Scripts\python.exe .\django_lab\lab\manage.py startapp authentication
 ```
 
 ## Create table in database

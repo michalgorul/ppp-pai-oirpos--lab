@@ -1,9 +1,13 @@
 {% if news %}
-<ul>
-{%for n in news %}
-<li> {{n.topic}} </a>
-{% endfor %}
-</ul>
+    <ul>
+    {% for n in news %}
+    <li><a href="/news/{{ n.id }}/">{{ n.topic }}</a></li>
+    {% endfor %}
+    </ul>
 {% else %}
-<p>No news are available. </p>
+    <p>No news are available.</p>
+{% endif %}
+
+{% if user.is_authenticated %}
+<a href="/news/add/">Add news</a>
 {% endif %}

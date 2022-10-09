@@ -33,6 +33,7 @@ ALLOWED_HOSTS: List[str] = []
 
 INSTALLED_APPS = [
     "news.apps.NewsConfig",
+    "authentication.apps.AuthenticationConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
