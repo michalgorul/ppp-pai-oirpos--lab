@@ -56,7 +56,7 @@ def update(request: HttpRequest, id: str) -> HttpResponse:
 
 
 @login_required(login_url="/login/")
-def update_record(request: HttpRequest, id: str):
+def update_record(request: HttpRequest, id: str) -> HttpResponse:
     new_news = request.POST
     news = get_object_or_404(News, id=id)
     news.topic = new_news.get("topic")
