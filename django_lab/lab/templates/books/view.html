@@ -8,10 +8,12 @@
 <a href="/login/">Login</a>
 {% endif %}
 {% block content %}{% endblock %}
+<br/>
 
-<form action="/news/add/" method="post">
-    {% csrf_token %}
-    {{ form.as_p  }}
-    <input type="submit" value="ADD">
-</form>
-
+{{ book.topic }}
+{{ book.author }}
+{{ book.genre }}
+{{ book.text }}
+{{ book.create_time }}
+{{ book.last_edit_time }}
+<p><a href="/books/update/{{book.id}}">Edit</a></p>

@@ -21,14 +21,14 @@ In the root folder just type in terminal:
 ### start app
 In the root folder just type in terminal:
 ```bash
-.\venv\Scripts\python.exe .\django_lab\lab\manage.py startapp authentication
+.\venv\Scripts\python.exe .\django_lab\lab\manage.py startapp books
 ```
 
 ## Create table in database
 ```bash
 .\venv\Scripts\python.exe .\django_lab\lab\manage.py migrate
-.\venv\Scripts\python.exe .\django_lab\lab\manage.py sqlmigrate news 0001
-.\venv\Scripts\python.exe .\django_lab\lab\manage.py makemigrations news
+.\venv\Scripts\python.exe .\django_lab\lab\manage.py sqlmigrate books 0001
+.\venv\Scripts\python.exe .\django_lab\lab\manage.py makemigrations books
 ```
 
 ## Linter

@@ -32,6 +32,7 @@ ALLOWED_HOSTS: List[str] = []
 # Application definition
 
 INSTALLED_APPS = [
+    "news.apps.BooksConfig",
     "news.apps.NewsConfig",
     "authentication.apps.AuthenticationConfig",
     "django.contrib.admin",

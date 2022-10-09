@@ -9,7 +9,7 @@
 {% endif %}
 {% block content %}{% endblock %}
 
-<form action="/news/add/" method="post">
+<form action="/books/add/" method="post">
     {% csrf_token %}
     {{ form.as_p  }}
     <input type="submit" value="ADD">
