@@ -1,3 +1,13 @@
+<a href="/">Home</a>
+<a href="/news/">News</a>
+{% if user.is_authenticated %}
+<a href="/logout/">Logout</a>
+{% endif %}
+{% if not user.is_authenticated %}
+<a href="/login/">Login</a>
+{% endif %}
+{% block content %}{% endblock %}
+
 <form action="/login/" method="post">
     {% csrf_token %}
     {{ form.as_p  }}

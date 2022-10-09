@@ -32,3 +32,9 @@ def log_in(request: HttpRequest) -> HttpResponse:
     else:
         context = {"form": LoginForm()}
         return render(request, "authentication/login.html", context)
+
+
+def log_out(request: HttpRequest) -> HttpResponse:
+    if request.user.is_authenticated:
+        logout(request)
+        return redirect("/")

@@ -1,0 +1,26 @@
+<a href="/">Home</a>
+<a href="/news/">News</a>
+{% if user.is_authenticated %}
+<a href="/logout/">Logout</a>
+{% endif %}
+{% if not user.is_authenticated %}
+<a href="/login/">Login</a>
+{% endif %}
+{% block content %}{% endblock %}
+
+<form action="/news/updaterecord/{{news.id}}/" method="post">
+   {% csrf_token %}
+    <br>Topic:
+    <input name="topic" value="{{ news.topic }}"/>
+    <br>
+    Text:
+    <label>
+        <input name="text" value="{{ news.text }}"/>
+    </label>
+    <br>
+    Author:
+    <input name="author" value="{{ news.author }}"/>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+

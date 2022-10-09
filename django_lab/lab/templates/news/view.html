@@ -1,5 +1,17 @@
+<a href="/">Home</a>
+<a href="/news/">News</a>
+{% if user.is_authenticated %}
+<a href="/logout/">Logout</a>
+{% endif %}
+{% if not user.is_authenticated %}
+<a href="/login/">Login</a>
+{% endif %}
+{% block content %}{% endblock %}
+<br/>
+
 {{ news.topic }}
 {{ news.author }}
 {{ news.text }}
 {{ news.create_time }}
 {{ news.last_edit_time }}
+<p><a href="/news/update/{{news.id}}">Edit</a></p>
