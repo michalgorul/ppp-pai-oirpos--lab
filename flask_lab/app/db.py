@@ -30,6 +30,7 @@ def db_fill() -> None:
     conn = sqlite3.connect(DATABASE)
     conn.executescript(
         """
+        delete from books;
         insert into books (topic, author, genre, text, create_time, last_edit_time) values ('Pseudalopex gymnocercus', 'Olympe Lehrer', 'Front-line', 'in faucibus orci luctus et ultrices posuere cubilia curae mauris', '2021-10-15 17:32:00', '2022-07-03 18:31:24');
         insert into books (topic, author, genre, text, create_time, last_edit_time) values ('Eolophus roseicapillus', 'Ax Fanner', 'secured line', 'massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat', '2022-02-08 01:24:31', '2022-04-28 04:05:08');
         insert into books (topic, author, genre, text, create_time, last_edit_time) values ('Acridotheres tristis', 'Mei Gowing', 'Triple-buffered', 'ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue', '2021-10-31 11:27:22', '2022-09-22 16:21:12');
@@ -54,6 +55,7 @@ def db_fill() -> None:
     conn.commit()
     conn.executescript(
         """
+        delete from news;
         insert into news (topic, author, text, create_time, last_edit_time) values ('Zosterops pallidus', 'Elfie Minnis', 'odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat', '2022-04-14 17:57:13', '2022-06-27 17:15:24');
         insert into news (topic, author, text, create_time, last_edit_time) values ('Cereopsis novaehollandiae', 'Fletcher Westbury', 'vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa', '2022-07-01 15:20:28', '2022-06-17 19:00:28');
         insert into news (topic, author, text, create_time, last_edit_time) values ('Microcebus murinus', 'Annnora Neill', 'sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus', '2021-10-14 23:36:58', '2022-04-06 22:57:23');
@@ -77,3 +79,14 @@ def db_fill() -> None:
     )
     conn.commit()
 
+
+def db_setup() -> str:
+    try:
+        db_init()
+        db_fill()
+        return """
+        Successfully initialized database
+        <a href="/"><h3>Home</h3></a>
+        """
+    except Exception:
+        return "Database init Failed"

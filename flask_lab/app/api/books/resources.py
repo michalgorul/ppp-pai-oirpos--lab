@@ -7,7 +7,7 @@ def home_books() -> str:
     return f"""
     <h1>BOOKS</h1>
     {get_books()}
-    <a href=/books/about>Przejdz do about</a>"""
+    <a href="/"><h3>Home</h3></a>"""
 
 
 def about_books() -> str:

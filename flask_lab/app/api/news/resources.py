@@ -5,7 +5,7 @@ def home_news() -> str:
     return f"""
     <h1>NEWS</h1>
     {get_news()}
-    <a href=/news/about>Przejdz do about</a>"""
+    <a href="/"><h3>Home</h3></a>"""
 
 
 def about_news() -> str:
