@@ -43,3 +43,6 @@ resources/
 # ENV
 local.env
 
+# Flask session
+flask_lab/app/flask_session
+

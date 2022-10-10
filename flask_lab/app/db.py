@@ -14,14 +14,6 @@ def db_init() -> None:
         "create_time DATETIME, "
         "last_edit_time DATETIME)"
     )
-    conn.executescript(
-        "CREATE TABLE if not exists news ("
-        "topic TEXT, "
-        "author TEXT, "
-        "text TEXT, "
-        "create_time DATETIME, "
-        "last_edit_time DATETIME)"
-    )
     conn.commit()
     conn.close()
 
@@ -51,31 +43,6 @@ def db_fill() -> None:
         insert into books (topic, author, genre, text, create_time, last_edit_time) values ('Haematopus ater', 'Perry O''Breen', 'Decentralized', 'nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit', '2022-08-03 06:01:17', '2022-04-02 13:35:16');
         insert into books (topic, author, genre, text, create_time, last_edit_time) values ('Francolinus leucoscepus', 'Bord Bolstridge', 'exuding', 'porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh', '2021-12-26 08:58:27', '2021-12-24 23:19:22');
         insert into books (topic, author, genre, text, create_time, last_edit_time) values ('Zosterops pallidus', 'Gib Siddle', 'function', 'est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus', '2022-02-24 07:39:21', '2021-12-23 22:44:44');"""
-    )
-    conn.commit()
-    conn.executescript(
-        """
-        delete from news;
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Zosterops pallidus', 'Elfie Minnis', 'odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat', '2022-04-14 17:57:13', '2022-06-27 17:15:24');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Cereopsis novaehollandiae', 'Fletcher Westbury', 'vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa', '2022-07-01 15:20:28', '2022-06-17 19:00:28');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Microcebus murinus', 'Annnora Neill', 'sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus', '2021-10-14 23:36:58', '2022-04-06 22:57:23');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Macropus parryi', 'Rustin Swinnerton', 'curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis', '2022-03-19 21:18:34', '2021-12-24 03:44:50');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Hystrix cristata', 'Marve Grogan', 'non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet', '2022-07-27 05:07:42', '2022-02-28 01:58:53');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Streptopelia senegalensis', 'Georgia Gunthorpe', 'sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac', '2022-09-28 03:42:34', '2022-06-03 09:08:36');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Nyctanassa violacea', 'Atlanta Benninck', 'lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat', '2021-12-17 20:27:47', '2021-10-10 17:21:52');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Motacilla aguimp', 'Josiah Gyver', 'id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et', '2022-04-11 01:30:05', '2022-06-01 01:51:00');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Ardea golieth', 'Kingston Keesman', 'diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis', '2021-10-24 02:32:18', '2021-11-10 12:27:11');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Uraeginthus angolensis', 'Virgie Kindle', 'varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi', '2022-02-23 04:08:41', '2022-02-08 04:44:36');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Spizaetus coronatus', 'Hayden Segrott', 'nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id', '2022-03-04 22:20:19', '2022-02-19 04:58:39');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Canis lupus', 'Caroline Oatley', 'non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac', '2021-10-19 23:10:23', '2022-03-20 02:09:48');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Manouria emys', 'Marlon Robbins', 'eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec', '2022-02-02 17:09:50', '2022-06-18 18:31:01');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Corythornis cristata', 'Lemmy Burdus', 'curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at', '2022-02-19 14:38:35', '2022-09-21 00:29:13');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Anastomus oscitans', 'Nevile Doumerc', 'sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis', '2021-10-31 12:19:22', '2022-04-02 03:01:12');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Agouti paca', 'Nicol Biggadike', 'eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim', '2021-10-21 14:32:57', '2021-11-26 03:39:02');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Ploceus intermedius', 'Maxim Lidgely', 'at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum', '2021-12-07 20:42:38', '2022-10-05 19:13:18');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Chloephaga melanoptera', 'Taryn Ayton', 'tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est', '2022-02-10 20:08:14', '2022-01-27 14:08:11');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Chamaelo sp.', 'Greta Plose', 'pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam', '2022-02-25 02:16:36', '2022-08-05 20:15:49');
-        insert into news (topic, author, text, create_time, last_edit_time) values ('Anser anser', 'Briggs Gasgarth', 'hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien', '2022-07-25 15:09:25', '2022-05-28 17:27:35');        """
     )
     conn.commit()
 
