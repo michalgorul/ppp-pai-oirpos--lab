@@ -65,3 +65,10 @@ def update_record(request: HttpRequest, id: str) -> HttpResponse:
     news.last_edit_time = timezone.now()
     news.save()
     return HttpResponseRedirect(reverse("index"))
+
+
+@login_required(login_url="/login/")
+def delete(request: HttpRequest, id: str) -> HttpResponse:
+    news = get_object_or_404(News, id=id)
+    news.delete()
+    return render(request, "news/view.html")

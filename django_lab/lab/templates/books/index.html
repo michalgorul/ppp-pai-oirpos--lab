@@ -12,7 +12,11 @@
 {% if books %}
     <ul>
     {% for b in books %}
-    <li><a href="/books/{{ b.id }}/">{{ b.topic }}</a></li>
+    <li>
+        <span>
+            <a href="/books/{{ b.id }}/">{{ b.topic }}</a>
+        </span>
+    </li>
     {% endfor %}
     </ul>
 {% else %}

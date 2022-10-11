@@ -12,7 +12,11 @@
 {% if news %}
     <ul>
     {% for n in news %}
-    <li><a href="/news/{{ n.id }}/">{{ n.topic }}</a></li>
+        <li>
+        <span>
+            <a href="/news/{{ n.id }}/">{{ n.topic }}</a>
+        </span>
+    </li>
     {% endfor %}
     </ul>
 {% else %}
