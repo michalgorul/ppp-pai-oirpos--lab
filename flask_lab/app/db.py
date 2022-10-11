@@ -15,6 +15,12 @@ def db_init() -> None:
         "last_edit_time DATETIME)"
     )
     conn.commit()
+    conn.executescript(
+        "CREATE TABLE if not exists users_flask ("
+        "login TEXT UNIQUE, "
+        "password TEXT, "
+        "admin INTEGER)"
+    )
     conn.close()
 
 
@@ -45,6 +51,15 @@ def db_fill() -> None:
         insert into books (topic, author, genre, text, create_time, last_edit_time) values ('Zosterops pallidus', 'Gib Siddle', 'function', 'est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus', '2022-02-24 07:39:21', '2021-12-23 22:44:44');"""
     )
     conn.commit()
+    conn.executescript(
+        """
+        delete from users_flask;
+        insert into users_flask (login, password, admin) values ('user', 'user', 0);
+        insert into users_flask (login, password, admin) values ('admin', 'admin', 1);
+        """
+    )
+    conn.commit()
+    conn.close()
 
 
 def db_setup() -> str:
@@ -52,8 +67,8 @@ def db_setup() -> str:
         db_init()
         db_fill()
         return """
-        Successfully initialized database
-        <a href="/"><h3>Home</h3></a>
-        """
+            Successfully initialized database
+            <a href="/"><h3>Home</h3></a>
+            """
     except Exception:
         return "Database init Failed"
