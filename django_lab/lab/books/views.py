@@ -66,3 +66,10 @@ def update_record(request: HttpRequest, id: str) -> HttpResponse:
     book.last_edit_time = timezone.now()
     book.save()
     return HttpResponseRedirect(reverse("index"))
+
+
+@login_required(login_url="/login/")
+def delete(request: HttpRequest, id: str) -> HttpResponse:
+    book = get_object_or_404(Book, id=id)
+    book.delete()
+    return render(request, "books/view.html")

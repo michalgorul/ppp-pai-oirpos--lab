@@ -1,8 +1,9 @@
 import sqlite3
 from datetime import datetime
 
-from flask import Request, redirect, Response, render_template, session
+from flask import Request, redirect, Response, render_template
 
+from flask_lab.app.admin.services import get_curr_user
 from flask_lab.app.api.books.models import Book
 from flask_lab.app.db import DATABASE
 from flask_lab.app.utils import dict_to_html
@@ -21,12 +22,8 @@ def get_books() -> str:
             author=book[1],
             genre=book[2],
             text=book[3],
-            create_time=int(
-                datetime.strptime(book[4], "%Y-%m-%d %H:%M:%S").timestamp()
-            ),
-            last_edit_time=int(
-                datetime.strptime(book[5], "%Y-%m-%d %H:%M:%S").timestamp()
-            ),
+            create_time=int(datetime.strptime(book[4], "%Y-%m-%d %H:%M:%S").timestamp()),
+            last_edit_time=int(datetime.strptime(book[5], "%Y-%m-%d %H:%M:%S").timestamp()),
         ).dict(by_alias=True)
         for book in books
     ]
@@ -37,7 +34,8 @@ def get_books() -> str:
 
 def add_book(request: Request) -> str | Response:
     if request.method == "GET":
-        if "user" in session:
+        user = get_curr_user()
+        if user:
             return render_template("books/add.html")
         else:
             return redirect("/login")
