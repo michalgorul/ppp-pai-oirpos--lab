@@ -1,6 +1,8 @@
 # Praktyka Programowania Python / Projektowanie Aplikacji Internetowych - PHP, Python, Javascript / Organizacja i rozwój projektów Open Source [SSM]
 
-## Creating VirtualEnv
+## Python
+
+### Creating VirtualEnv
 ```bash
 deactivate
 rmdir venv
