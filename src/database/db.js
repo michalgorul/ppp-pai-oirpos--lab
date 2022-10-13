@@ -5,7 +5,6 @@ const sequelize = new Sequelize('database ', 'root ', 'root ', {
   storage: ' orm-db.sqlite',
 });
 
-// synchroniznacja bazy danych - np. tworzenie tabel
 sequelize.sync() // sequelize.sync({ force: true })
   .then(() => {
     console.log('Database & tables created!');
