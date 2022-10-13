@@ -26,3 +26,23 @@ x64 (64 bit)
 Open C:\Windows\system32\cmd.exe
 Run the command: powershell Set-ExecutionPolicy RemoteSigned
 ```
+
+## Running server
+
+### runserver
+In the root folder just type in terminal:
+```bash
+.\venv\Scripts\flask.exe --app app run
+```
+
+## Linter
+In the root folder just type in terminal:
+```bash
+mypy flask_lab
+```
+
+## Format
+In the root folder just type in terminal:
+```bash
+black flask_lab
+```
