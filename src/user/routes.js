@@ -4,55 +4,20 @@ const router = express.Router();
 
 const model = require('./model');
 
-router.get('/', (req, res) => {
-  model.findAll().then((users) => res.json(users));
-});
+service = require('./services')
 
-router.get('/:id', (req, res) => {
-  model.findByPk(req.params.id).then((users) => res.json(users));
-});
+router.get('/', [service.getUsers]);
 
-router.post('/register', (req, res) => {
-  console.log(`registering in, body=${req.body}`);
-  const { userName, userPassword } = req.body;
-  if (userName && userPassword) {
-    model.count({ where: { userName } }).then(
-      (count) => {
-        if (count !== 0) {
-          res.send({ register: false });
-        } else {
-          model.create({ userName, userPassword })
-            .then(() => res.send({ register: true }))
-            .catch((err) => {
-              res.send({ register: false });
-              console.log(err);
-            });
-        }
-      },
-    );
-  } else {
-    res.send({ register: false });
-  }
-});
+router.get('/:id', [service.getUser]);
 
-router.post('/login', (req, res) => {
-  console.log(`logging in, body=${req.body}`);
-  const { userName, userPassword } = req.body;
+router.post('/register', [service.register]);
 
-  if (!userPassword || !userName) {
-    req.session.loggedin = false;
-    res.send({ loggedin: req.session.loggedin });
-    return;
-  }
-  const user = model.findOne({ where: { userName, userPassword } });
-  if (!user) return;
+router.post('/login', [service.login])
 
-  req.session.loggedin = true;
-  res.send({ loggedin: req.session.loggedin });
-});
+router.get('/login-test', [service.checkSessions, service.loginTest]);
 
-router.delete('/:id', (req, res) => {
-  model.destroy({ where: { id: req.params.id } }).then((r) => res.json(r));
-});
+router.post('/logout', [service.logout])
+
+router.delete('/:id', [service.deleteUser]);
 
 module.exports = router;
