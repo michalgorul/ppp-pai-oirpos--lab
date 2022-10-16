@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Część 2</title>
+</head>
+<body>
+    <script src="app.js"></script>
+
+    Login: <input type="text" id="input_login"><br><br>
+    Password: <input type="text" id="input_password"><br><br>
+    <button id="login" type="button" title="Simulate login" onclick="login()">
+        Simulate login
+    </button>
+    <button id="logout" type="button" title="Simulate logout" onclick="logout()">
+        Simulate logout
+    </button>
+    <button id="login-test" type="button" title="Simulate test-login" onclick="testLogin()">
+        Simulate test login
+    </button>
+    <button id="wsButton" type="button" title="Open WebSocket connection" onclick="wsBtn()">
+        Open WebSocket connection
+    </button>
+    <button id="wsSendButton" type="button" title="Send WebSocket message" onclick="wsSendBtn()">
+        Send WebSocket message
+    </button><br><br>
+    To User: <input type="number" id="user"><br><br>
+    <button id="send" type="button" title="Simulate logout" onclick="send()">
+        Simulate message send
+    </button>
+    <div id="messages" style="height: 400px; overflow: scroll"></div>
+</body>
+</html>
