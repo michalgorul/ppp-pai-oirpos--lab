@@ -7,3 +7,4 @@ tensorflow==2.10.0
 numpy==1.23.3
 opencv-python==4.6.0.66
 matplotlib==3.6.2
+PyQt6==6.4.0
