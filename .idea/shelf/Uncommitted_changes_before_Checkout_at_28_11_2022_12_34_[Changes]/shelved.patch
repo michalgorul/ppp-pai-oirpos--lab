@@ -1,0 +1,24 @@
+Index: package.json
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	
++++ b/package.json	
+@@ -1,5 +1,5 @@
+ {
+-  "name": "react_lab",
++  "name": "ppp-pai-oirpos--lab",
+   "private": true,
+   "version": "0.0.0",
+   "type": "module",
+Index: package-lock.json
+===================================================================
+diff --git a/package-lock.json b/package-lock.json
+--- a/package-lock.json	
++++ b/package-lock.json	
+@@ -1,5 +1,5 @@
+ {
+-  "name": "react_lab",
++  "name": "ppp-pai-oirpos--lab",
+   "version": "0.0.0",
+   "lockfileVersion": 1,
+   "requires": true,
