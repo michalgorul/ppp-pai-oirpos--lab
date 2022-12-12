@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import apiClient from "../apiClient";
+import apiClient from '../apiClient';
 
 const RegisterPage = () => {
-  const [userName, setUserName] = useState("");
-  const [userPassword, setUserPassword] = useState("");
+  const [userName, setUserName] = useState('');
+  const [userPassword, setUserPassword] = useState('');
 
   return (
     <div>
@@ -13,31 +13,31 @@ const RegisterPage = () => {
         <div>
           <label>Nazwa Użytkownika</label>
           <input
-            type="text"
+            type='text'
             value={userName}
-            onChange={(e) => setUserName(e.target.value)}
+            onChange={e => setUserName(e.target.value)}
           />
         </div>
         <div>
           <label>Hasło</label>
           <input
-            type="password"
+            type='password'
             value={userPassword}
-            onChange={(e) => setUserPassword(e.target.value)}
+            onChange={e => setUserPassword(e.target.value)}
           />
         </div>
         <div>
           <button
-            type="submit"
-            onClick={(e) => {
+            type='submit'
+            onClick={e => {
               // Zapobiega submit'owi formy
               e.preventDefault();
               // Zarejestruj się
-              apiClient.register(userName, userPassword).then((data) => {
+              apiClient.register(userName, userPassword).then(data => {
                 alert(
                   data.register
-                    ? "Stworzono użytkownika"
-                    : "Nie udało się stworzyć użytkownika"
+                    ? 'Stworzono użytkownika'
+                    : 'Nie udało się stworzyć użytkownika'
                 );
               });
             }}

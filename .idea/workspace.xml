@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="project init">
+      <change afterPath="$PROJECT_DIR$/react_lab/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react_lab/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2022_12_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2022_12_34__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/AuthContextProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/AuthContextProvider.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/components/ChatMessage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/ChatMessage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/components/UserListItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/UserListItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/pages/RegisterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/RegisterPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/pages/UserListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/UserListPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,28 +50,32 @@
   </component>
   <component name="ProjectId" id="2IAjJm78FOIBrcVoF0fh6lyDyCm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Michael/WebstormProjects/ppp-pai-oirpos--lab/react_lab/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Michael\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\222.4345.14\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/Users/Michael/WebstormProjects/ppp-pai-oirpos--lab/react_lab/.eslintrc.json",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "C:\\Users\\Michael\\AppData\\Roaming\\npm\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Users\\Michael\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\222.4345.14\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="react_lab" />
@@ -116,6 +132,8 @@
       <workItem from="1669634282444" duration="474000" />
       <workItem from="1669634814754" duration="2364000" />
       <workItem from="1670844174364" duration="1746000" />
+      <workItem from="1670878045394" duration="218000" />
+      <workItem from="1670878275827" duration="1684000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669631539690</created>

@@ -1,33 +1,35 @@
+const host = 'http://localhost:8080/api';
+
 /**
  * Zarejestruj użytkownika
- * @param {string} user_name
- * @param {string} user_password
+ * @param {string} userName
+ * @param {string} userPassword
  * @returns Promise
  */
-const register = async (user_name, user_password) => {
-  const response = await fetch("/api/register/", {
-    method: "POST",
+const register = async (userName, userPassword) => {
+  const response = await fetch(`${host}/users/register/`, {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ user_name, user_password }),
+    body: JSON.stringify({ userName, userPassword }),
   });
   return response.json(); // Promise
 };
 
 /**
  * Zaloguj użytkownika
- * @param {string} user_name
- * @param {string} user_password
+ * @param {string} userName
+ * @param {string} userPassword
  * @returns Promise
  */
-const login = async (user_name, user_password) => {
-  const response = await fetch("/api/login/", {
-    method: "POST",
+const login = async (userName, userPassword) => {
+  const response = await fetch(`${host}/users/login`, {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ user_name, user_password }),
+    body: JSON.stringify({ userName, userPassword }),
   });
   return response.json(); // Promise
 };
@@ -36,8 +38,8 @@ const login = async (user_name, user_password) => {
  * Wyloguj
  * @returns Promise
  */
-const logout = async (id) => {
-  const response = await fetch("/api/logout/");
+const logout = async () => {
+  const response = await fetch(`${host}/users/logout`);
   return response.json(); // Promise
 };
 
@@ -46,7 +48,7 @@ const logout = async (id) => {
  * @returns Promise
  */
 const loginTest = async () => {
-  const response = await fetch("/api/login-test/");
+  const response = await fetch(`${host}/users/login/test`);
   return response.json(); // Promise
 };
 
@@ -55,7 +57,7 @@ const loginTest = async () => {
  * @returns Promise
  */
 const getUsers = async () => {
-  const response = await fetch("/api/users/");
+  const response = await fetch(`${host}/api/users/`);
   return response.json(); // Promise
 };
 
@@ -64,8 +66,8 @@ const getUsers = async () => {
  * @param {number} id - id użytkownika
  * @returns Promise
  */
-const getMessages = async (id) => {
-  const response = await fetch(`/api/messages/${id}`);
+const getMessages = async id => {
+  const response = await fetch(`${host}/api/messages/${id}`);
   return response.json(); // Promise
 };
 
@@ -76,10 +78,10 @@ const getMessages = async (id) => {
  * @returns Promise
  */
 const sendMessages = async (message_text, message_to_user_id) => {
-  const response = await fetch("/api/messages/", {
-    method: "POST",
+  const response = await fetch('/api/messages/', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ message_text, message_to_user_id }),
   });

@@ -1,13 +1,12 @@
-import { useEffect } from "react";
-import "./App.css";
+import './App.css';
 // Router imports
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 // Components
-import Toolbar from "./components/Toolbar";
+import Toolbar from './components/Toolbar';
 // Pages
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import UserListPage from "./pages/UserListPage";
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import UserListPage from './pages/UserListPage';
 
 function App() {
   return (
@@ -15,11 +14,11 @@ function App() {
       <Router>
         <Toolbar />
         <Switch>
-          <Route path="/register" component={RegisterPage} />
-          <Route path="/login" component={LoginPage} />
+          <Route path='/register' component={RegisterPage} />
+          <Route path='/login' component={LoginPage} />
           {/* TODO: Route dla Chat.jsx */}
           {/* Default route */}
-          <Route exact path="/">
+          <Route exact path='/'>
             <UserListPage />
           </Route>
         </Switch>
