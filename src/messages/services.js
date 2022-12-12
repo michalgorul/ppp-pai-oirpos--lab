@@ -51,12 +51,12 @@ const sendMessages = (request, response) => {
               // Wysyłanie wiadomości do odiorcy
               onlineUsers[messageToUserId].send(messageText);
             }
-            // if (message.messageFromUserId !== message.messageToUserId) {
-            //   if (message.messageFromUserId in onlineUsers) {
-            //     // Wysyłanie wiadomości do nadawcy jeżeli odbiorca nie jest nadawca
-            //     onlineUsers[request.session.userId].send(messageText);
-            //   }
-            // }
+            if (message.messageFromUserId !== message.messageToUserId) {
+              if (message.messageFromUserId in onlineUsers) {
+                // Wysyłanie wiadomości do nadawcy jeżeli odbiorca nie jest nadawca
+                onlineUsers[request.session.userId].send(messageText);
+              }
+            }
 
             response.send({ sending: true });
           })
