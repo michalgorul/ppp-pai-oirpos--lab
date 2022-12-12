@@ -12,7 +12,7 @@ const LoginPage = () => {
 
     const onLogin = useCallback((e) => {
         e.preventDefault();
-        // Zarejestruj się
+        // Zaloguj się
         apiClient.login(userName, userPassword).then((data) => {
             alert(
                 data.register

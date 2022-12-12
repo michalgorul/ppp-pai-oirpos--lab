@@ -22,7 +22,6 @@ const register = async (user_name, user_password) => {
  * @returns Promise
  */
 const login = async (user_name, user_password) => {
-  // TODO: Uzupełnić w opraciu o inne funkcje, zwłaszcza register(user_name, user_password).
   const response = await fetch("/api/login/", {
     method: "POST",
     headers: {

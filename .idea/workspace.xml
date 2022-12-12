@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="project init">
-      <change afterPath="$PROJECT_DIR$/react_lab/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/AuthContextProvider.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/components/ChatMessage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/components/UserListItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/pages/LoginPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/pages/RegisterPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/src/pages/UserListPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/LoginPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +75,17 @@
       <recent name="C:\Users\Michael\WebstormProjects\ppp-pai-oirpos--lab\react_lab\src\assets" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev (1)">
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/react_lab/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -94,7 +98,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -110,7 +114,8 @@
       <workItem from="1669631220088" duration="710000" />
       <workItem from="1669631967035" duration="637000" />
       <workItem from="1669634282444" duration="474000" />
-      <workItem from="1669634814754" duration="2229000" />
+      <workItem from="1669634814754" duration="2364000" />
+      <workItem from="1670844174364" duration="1746000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669631539690</created>
@@ -147,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669634956171</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="project init">
+      <created>1669637178553</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669637178553</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

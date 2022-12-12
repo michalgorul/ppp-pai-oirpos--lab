@@ -31,6 +31,8 @@ const Toolbar = () => {
         <span
           style={{ float: "right", marginRight: "1rem", cursor: "pointer" }}
           onClick={(e) => {
+            e.preventDefault()
+            apiClient.logout(id)
             // TODO: Uzupełnić o funkcję wylogowania użytkownika.
           }}
         >
