@@ -39,7 +39,12 @@ const login = async (userName, userPassword) => {
  * @returns Promise
  */
 const logout = async () => {
-  const response = await fetch(`${host}/users/logout`);
+  const response = await fetch(`${host}/users/logout`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
   return response.json(); // Promise
 };
 
