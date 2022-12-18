@@ -8,6 +8,10 @@ const UserListPage = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
   const [users, setUsers] = useState([]);
 
+  useEffect(() => {
+    apiClient.getUsers().then(r => setUsers(r));
+  }, []);
+
   // TODO: Jeśli użytkownik jest zalogowany ustaw listę użytkowników
 
   // TODO:WEBSOCKET Jeśli zostanie utworzony nowy użytkownik zaktualizuj
@@ -19,9 +23,8 @@ const UserListPage = () => {
   return (
     <div>
       <h1>Lista użytkowników</h1>
-      {users.map((user, idx) => (
-        <p>Placeholder</p>
-        // TODO: Wyświetl element z listy użytkowników
+      {users.map(user => (
+        <UserListItem user={user} key={user.id} />
       ))}
     </div>
   );

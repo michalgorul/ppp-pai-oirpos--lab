@@ -62,7 +62,7 @@ const loginTest = async () => {
  * @returns Promise
  */
 const getUsers = async () => {
-  const response = await fetch(`${host}/api/users/`);
+  const response = await fetch(`${host}/users`);
   return response.json(); // Promise
 };
 
@@ -78,17 +78,17 @@ const getMessages = async id => {
 
 /**
  * Wyślij wiadomość
- * @param {string} message_text - treść wiadomości
- * @param {number} message_to_user_id - id użytkownika do którego zostanie wysłana wiadomość
+ * @param {string} messageText - treść wiadomości
+ * @param {number} messageToUserId - id użytkownika do którego zostanie wysłana wiadomość
  * @returns Promise
  */
-const sendMessages = async (message_text, message_to_user_id) => {
-  const response = await fetch('/api/messages/', {
+const sendMessages = async (messageText, messageToUserId) => {
+  const response = await fetch(`${host}/messages/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ message_text, message_to_user_id }),
+    body: JSON.stringify({ messageText, messageToUserId }),
   });
   return response.json(); // Promise
 };

@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="project init">
-      <change afterPath="$PROJECT_DIR$/react_lab/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react_lab/.prettierrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2022_12_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2022_12_34__Changes_.xml" afterDir="false" />
+    <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="add logout">
+      <change afterPath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/AuthContextProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/AuthContextProvider.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/components/ChatMessage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/ChatMessage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/components/UserListItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/UserListItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/LoginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/pages/RegisterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/RegisterPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/pages/UserListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/UserListPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +51,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Users/Michael/WebstormProjects/ppp-pai-oirpos--lab/react_lab/.eslintrc.json",
+    "last_opened_file_path": "C:/Users/Michael/WebstormProjects/ppp-pai-oirpos--lab/react_lab/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -83,9 +76,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\ppp-pai-oirpos--lab\react_lab\src\pages" />
       <recent name="C:\Users\Michael\WebstormProjects\ppp-pai-oirpos--lab\react_lab\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\ppp-pai-oirpos--lab" />
       <recent name="C:\Users\Michael\WebstormProjects\ppp-pai-oirpos--lab\react_lab" />
       <recent name="C:\Users\Michael\WebstormProjects\ppp-pai-oirpos--lab\react_lab\src" />
       <recent name="C:\Users\Michael\WebstormProjects\ppp-pai-oirpos--lab\react_lab\src\assets" />
@@ -133,7 +128,8 @@
       <workItem from="1669634814754" duration="2364000" />
       <workItem from="1670844174364" duration="1746000" />
       <workItem from="1670878045394" duration="218000" />
-      <workItem from="1670878275827" duration="1684000" />
+      <workItem from="1670878275827" duration="1955000" />
+      <workItem from="1671402196814" duration="3146000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669631539690</created>
@@ -177,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669637178553</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add logging in and registering; logout -&gt; WIP">
+      <created>1670880238025</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670880238025</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add logout">
+      <created>1671402908111</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671402908111</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +206,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project init" />
-    <option name="LAST_COMMIT_MESSAGE" value="project init" />
+    <MESSAGE value="add logging in and registering; logout -&gt; WIP" />
+    <MESSAGE value="add logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logout" />
   </component>
 </project>

@@ -15,7 +15,7 @@ const LoginPage = () => {
       e.preventDefault();
       apiClient.login(userName, userPassword).then(data => {
         const { loggedin: looggedIn } = data;
-        alert(looggedIn ? 'Zalogowano' : 'Nie udało się zalogować');
+        console.log(looggedIn ? 'Zalogowano' : 'Nie udało się zalogować');
         if (looggedIn) setIsLoggedIn(true);
       });
     },
