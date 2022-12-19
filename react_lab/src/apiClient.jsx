@@ -72,7 +72,7 @@ const getUsers = async () => {
  * @returns Promise
  */
 const getMessages = async id => {
-  const response = await fetch(`${host}/api/messages/${id}`);
+  const response = await fetch(`${host}/messages/${id}`);
   return response.json(); // Promise
 };
 

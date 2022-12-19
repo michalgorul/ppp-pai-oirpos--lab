@@ -20,10 +20,27 @@ const Chat = () => {
   // TODO: Przy pierwszym załadowaniu komponenetu (użyj useEffect) pobierz listę
   // wszystkich wiadomości za pomocą funkcji getMessages z pliku apiClient.jsx.
   // Zapisz/Ustaw otrzymane wiadomości w zmiennej stanu "messages"
-  useEffect(() => {}, []);
+  useEffect(() => {
+    apiClient.getMessages(params.id).then(r => setMessages(r));
+  }, [params, params.id]);
 
   // TODO:WEBSOCKET Zdefinuj WebSocket tak aby przy odebraniu nowej wiadomości, lista
   // wiadomości została aktualizowana o nową wiadomość
+
+  const ws = useRef(null);
+
+  useEffect(() => {
+    ws.current = new WebSocket('ws://localhost:8080');
+    ws.current.onopen = () => console.log('ws onopen');
+    ws.current.onclose = () => console.log('ws onclose');
+    console.log(ws.current);
+    ws.current.onmessage = e => {
+      console.log(e);
+      // TODO: Przechwyć wiadomość tutaj.
+    };
+    // const currentWS = ws.current;
+    // return () => currentWS.close();
+  }, []);
 
   if (!isLoggedIn) {
     return <p>Zaloguj się aby wyświetlić chat z tym użytkownikiem</p>;
@@ -34,12 +51,17 @@ const Chat = () => {
       <div>
         <h1>Chat ID = {messageToUserId}</h1>
         <div style={{ backgroundColor: 'lightgrey', maxHeight: '600px' }}>
-          {messages.length === 0 ? <p>Brak wiadomości</p> : <></>}
-          {messages.map((message, idx) => {
-            return (
-              <ChatMessage key={`chat-message-${idx}`} message={message} />
-            );
-          })}
+          {messages.length === 0 || !messages.length ? (
+            <p>Brak wiadomości</p>
+          ) : (
+            <></>
+          )}
+          {messages.length &&
+            messages.map((message, idx) => {
+              return (
+                <ChatMessage key={`chat-message-${idx}`} message={message} />
+              );
+            })}
         </div>
       </div>
       <div>
@@ -57,7 +79,6 @@ const Chat = () => {
               type='submit'
               onClick={e => {
                 e.preventDefault();
-                // TODO: Wyślij wiadomość poprzez funckje sendMessages z apiClient
                 apiClient
                   .sendMessages(messageText, messageToUserId)
                   .then(r => console.log(r));

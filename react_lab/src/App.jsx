@@ -1,6 +1,6 @@
 import './App.css';
 // Router imports
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Components
 import Toolbar from './components/Toolbar';
 // Pages
@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route path='/register' component={RegisterPage} />
           <Route path='/login' component={LoginPage} />
-          <Route path='/chat' component={Chat} />
+          <Route path='/chat/:id' component={Chat} />
           {/* TODO: Route dla Chat.jsx */}
           {/* Default route */}
           <Route exact path='/'>

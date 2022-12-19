@@ -12,7 +12,7 @@ const Toolbar = () => {
       <div>
         <ul>
           <li>
-            <Link to='/'>Lista użytkowników</Link>
+            <Link to=''>Lista użytkowników</Link>
           </li>
           <li>
             <Link to='/login'>Logowanie</Link>
