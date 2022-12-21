@@ -36,7 +36,6 @@ const login = (req, res) => {
   }
   model.findOne({ where: { userName, userPassword } })
     .then((user) => {
-      console.log(user);
       if (!user) {
         req.session.loggedin = false;
         res.send({ loggedin: req.session.loggedin });
@@ -44,11 +43,13 @@ const login = (req, res) => {
       req.session.loggedin = true;
       req.session.userId = user.id;
       res.send({ loggedin: req.session.loggedin });
+      console.log(`userId: ${req.session.userId}, loggedin: ${req.session.loggedin}`)
     })
     .catch((e) => console.log(e));
 };
 
 const checkSessions = (req, res, next) => {
+    console.log(req.session)
   if (req.session.loggedin) {
     next();
   } else {
@@ -57,7 +58,8 @@ const checkSessions = (req, res, next) => {
 };
 
 const loginTest = (req, res) => {
-  res.send({ loggedin: true });
+    console.log(`userId: ${req.session.userId}, loggedin: ${req.session.loggedin}`)
+    res.send({ loggedin: true });
 };
 
 const logout = (req, res) => {

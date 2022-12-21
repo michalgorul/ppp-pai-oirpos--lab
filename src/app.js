@@ -12,7 +12,13 @@ const server = require('http').createServer(app);
 
 app.use(express.static(`${__dirname}/websocket/`));
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
+  credentials: true,
+  optionsSuccessStatus: 200,
+}));
+
 app.use(express.json());
 
 const sessionParser = session({
@@ -32,7 +38,7 @@ app.use('/api/test-get', (req, res) => res.send('testGet working'));
 app.use('/api/users', usersRouter);
 app.use('/api/messages', messagesRouter);
 
-const wss = new WebSocketServer({ noServer: true });
+const wss = new WebSocketServer({ port: 8081 });
 
 server.on('upgrade', (request, socket, head) => {
   // Sprawdzenie czy dla danego połączenia istnieje sesja
@@ -68,7 +74,7 @@ wss.on('connection', (ws, request) => {
     try {
       const data = JSON.parse(message);
     } catch (e) {
-      console.log(e);
+      // console.log(e);
     }
   });
 
