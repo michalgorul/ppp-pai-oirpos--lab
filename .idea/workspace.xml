@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="work on part 3">
+    <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="work on ws">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +126,7 @@
       <workItem from="1670878275827" duration="1955000" />
       <workItem from="1671402196814" duration="3452000" />
       <workItem from="1671476143083" duration="6418000" />
-      <workItem from="1671649635185" duration="2961000" />
+      <workItem from="1671649635185" duration="11394000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669631539690</created>
@@ -199,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671483655196</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix session">
+      <created>1671653690503</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671653690504</updated>
+    </task>
+    <task id="LOCAL-00012" summary="work on ws">
+      <created>1671658420701</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671658420701</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +235,8 @@
     <MESSAGE value="add logout" />
     <MESSAGE value="add part 2" />
     <MESSAGE value="work on part 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on part 3" />
+    <MESSAGE value="fix session" />
+    <MESSAGE value="work on ws" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on ws" />
   </component>
 </project>

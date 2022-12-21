@@ -79,7 +79,13 @@ const getUsers = async () => {
  * @returns Promise
  */
 const getMessages = async id => {
-  const response = await fetch(`${host}/messages/${id}`);
+  const response = await fetch(`${host}/messages/${id}`, {
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
   return response.json(); // Promise
 };
 
@@ -92,6 +98,7 @@ const getMessages = async id => {
 const sendMessages = async (messageText, messageToUserId) => {
   const response = await fetch(`${host}/messages/`, {
     method: 'POST',
+    credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
     },

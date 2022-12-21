@@ -1,10 +1,10 @@
 import React from 'react';
 
 const ChatMessage = ({ message }) => {
-  const { message_from_user_id, message_text } = message;
+  const { messageFromUserId, messageText } = message;
   return (
     <div>
-      Od: {message_from_user_id} - „{message_text}”
+      Od: {messageFromUserId} - „{messageText}”
     </div>
   );
 };

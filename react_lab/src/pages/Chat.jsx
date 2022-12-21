@@ -17,9 +17,6 @@ const Chat = () => {
 
   const [messageText, setMessageText] = useState('');
 
-  // TODO: Przy pierwszym załadowaniu komponenetu (użyj useEffect) pobierz listę
-  // wszystkich wiadomości za pomocą funkcji getMessages z pliku apiClient.jsx.
-  // Zapisz/Ustaw otrzymane wiadomości w zmiennej stanu "messages"
   useEffect(() => {
     apiClient.getMessages(params.id).then(r => setMessages(r));
   }, [params, params.id]);
@@ -27,19 +24,28 @@ const Chat = () => {
   // TODO:WEBSOCKET Zdefinuj WebSocket tak aby przy odebraniu nowej wiadomości, lista
   // wiadomości została aktualizowana o nową wiadomość
 
+  const sendMessageWebSocket = message => {
+    if (ws.current) {
+      ws.current.send(message);
+    }
+  };
+
   const ws = useRef(null);
 
   useEffect(() => {
-    ws.current = new WebSocket('ws://localhost:8081');
-    ws.current.onopen = () => console.log('ws onopen');
+    ws.current = new WebSocket('ws://localhost:8081', [], {
+      Cookie: document.cookie,
+    });
+    ws.current.onopen = () => {
+      console.log('ws onopen');
+    };
     ws.current.onclose = () => console.log('ws onclose');
-    console.log(ws.current);
     ws.current.onmessage = e => {
-      console.log(e);
+      console.log(e.data);
       // TODO: Przechwyć wiadomość tutaj.
     };
-    // const currentWS = ws.current;
-    // return () => currentWS.close();
+    const currentWS = ws.current;
+    return () => currentWS.close();
   }, []);
 
   if (!isLoggedIn) {
@@ -50,7 +56,7 @@ const Chat = () => {
     <>
       <div>
         <h1>Chat ID = {messageToUserId}</h1>
-        <div style={{ backgroundColor: 'lightgrey', maxHeight: '600px' }}>
+        <div style={{ backgroundColor: '#453e3d' }}>
           {messages.length === 0 || !messages.length ? (
             <p>Brak wiadomości</p>
           ) : (
@@ -70,7 +76,7 @@ const Chat = () => {
             <label>Wiadomość</label>
             <input
               type='text'
-              as='textarea'
+              is='textarea'
               onChange={e => setMessageText(e.target.value)}
             />
           </div>
@@ -79,6 +85,7 @@ const Chat = () => {
               type='submit'
               onClick={e => {
                 e.preventDefault();
+                sendMessageWebSocket(messageText);
                 apiClient
                   .sendMessages(messageText, messageToUserId)
                   .then(r => console.log(r));

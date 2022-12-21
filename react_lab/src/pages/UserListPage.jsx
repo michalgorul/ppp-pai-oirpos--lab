@@ -1,18 +1,16 @@
-import React, { useContext, useEffect, useState, useRef } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../AuthContextProvider';
 import apiClient from '../apiClient';
 
 import UserListItem from '../components/UserListItem';
 
 const UserListPage = () => {
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn } = useContext(AuthContext);
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     apiClient.getUsers().then(r => setUsers(r));
   }, []);
-
-  // TODO: Jeśli użytkownik jest zalogowany ustaw listę użytkowników
 
   // TODO:WEBSOCKET Jeśli zostanie utworzony nowy użytkownik zaktualizuj
   // listę użytkowników przez WebSocket.
