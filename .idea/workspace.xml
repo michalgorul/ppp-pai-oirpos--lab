@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="add part 2">
+    <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="work on part 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/components/Toolbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" afterDir="false" />
@@ -127,7 +126,8 @@
       <workItem from="1670878045394" duration="218000" />
       <workItem from="1670878275827" duration="1955000" />
       <workItem from="1671402196814" duration="3452000" />
-      <workItem from="1671476143083" duration="5703000" />
+      <workItem from="1671476143083" duration="6418000" />
+      <workItem from="1671649635185" duration="2961000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669631539690</created>
@@ -192,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671406035099</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="work on part 3">
+      <created>1671483655196</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671483655196</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +221,7 @@
     <MESSAGE value="add logging in and registering; logout -&gt; WIP" />
     <MESSAGE value="add logout" />
     <MESSAGE value="add part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add part 2" />
+    <MESSAGE value="work on part 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on part 3" />
   </component>
 </project>

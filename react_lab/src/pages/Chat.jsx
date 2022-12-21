@@ -13,7 +13,7 @@ const Chat = () => {
   const messageToUserId = params.id;
   const [messages, setMessages] = useState([]);
 
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn } = useContext(AuthContext);
 
   const [messageText, setMessageText] = useState('');
 
@@ -30,7 +30,7 @@ const Chat = () => {
   const ws = useRef(null);
 
   useEffect(() => {
-    ws.current = new WebSocket('ws://localhost:8080');
+    ws.current = new WebSocket('ws://localhost:8081');
     ws.current.onopen = () => console.log('ws onopen');
     ws.current.onclose = () => console.log('ws onclose');
     console.log(ws.current);

@@ -36,10 +36,21 @@ const Toolbar = () => {
               const { loggedin } = data;
               setIsLoggedIn(loggedin);
             });
-            // TODO: Uzupełnić o funkcję wylogowania użytkownika.
           }}
         >
           Wyloguj
+        </span>
+        <span
+          style={{ float: 'right', marginRight: '1rem', cursor: 'pointer' }}
+          onClick={e => {
+            e.preventDefault();
+            apiClient.loginTest().then(data => {
+              const { loggedin } = data;
+              setIsLoggedIn(loggedin);
+            });
+          }}
+        >
+          Test login
         </span>
       </div>
       <hr />

@@ -26,6 +26,7 @@ const register = async (userName, userPassword) => {
 const login = async (userName, userPassword) => {
   const response = await fetch(`${host}/users/login`, {
     method: 'POST',
+    credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -53,7 +54,13 @@ const logout = async () => {
  * @returns Promise
  */
 const loginTest = async () => {
-  const response = await fetch(`${host}/users/login/test`);
+  const response = await fetch(`${host}/users/login/test`, {
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
   return response.json(); // Promise
 };
 
