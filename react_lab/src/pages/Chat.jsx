@@ -43,6 +43,7 @@ const Chat = () => {
     ws.current.onmessage = e => {
       console.log(e.data);
       // TODO: Przechwyć wiadomość tutaj.
+      setMessages([...messages, e.data])
     };
     const currentWS = ws.current;
     return () => currentWS.close();

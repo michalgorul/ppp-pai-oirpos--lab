@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7306e034-0af0-4fc3-a542-bcf31ce12577" name="Changes" comment="work on ws">
+    <list default="true" id="6e92e221-fe0b-45e7-897e-5668ee429b06" name="Changes" comment="nwm">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2022_12_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2022_12_34__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_lab/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +107,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.dev (1)" />
+      <item itemvalue="npm.dev" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev (1)" />

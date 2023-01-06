@@ -1,4 +1,6 @@
+import Cookies from 'universal-cookie';
 const host = 'http://localhost:8080/api';
+const cookies = new Cookies();
 
 /**
  * Zarejestruj użytkownika
@@ -54,11 +56,13 @@ const logout = async () => {
  * @returns Promise
  */
 const loginTest = async () => {
+
   const response = await fetch(`${host}/users/login/test`, {
     method: 'GET',
     credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
+      "Cookie": cookies.get("connect.sid")
     },
   });
   return response.json(); // Promise
