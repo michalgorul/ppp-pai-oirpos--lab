@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e92e221-fe0b-45e7-897e-5668ee429b06" name="Changes" comment="nwm">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2022_12_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2022_12_34__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/apiClient.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/src/pages/Chat.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_lab/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/react_lab/vite.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="6e92e221-fe0b-45e7-897e-5668ee429b06" name="Changes" comment="d" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671658420701</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="d">
+      <created>1673018487123</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673018487123</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +244,7 @@
     <MESSAGE value="work on part 3" />
     <MESSAGE value="fix session" />
     <MESSAGE value="work on ws" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on ws" />
+    <MESSAGE value="d" />
+    <option name="LAST_COMMIT_MESSAGE" value="d" />
   </component>
 </project>
